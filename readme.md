@@ -1,32 +1,31 @@
 # Independent Set
 
-Solutions to the independent set problem.
+Independent set algorithms.
 
 > Find the largest independent set of the given undirected graph.
 
-# Naiv
+# naive
 
-Die naive Lösung gehst durch alle mögliche Kombinationen des Graphen.
+The naive solution iterates through all combinations of graphs of decreasing size. This is apparently the best you can do with no additional information about the graph. All other implementations exploit some known structure about the graph.
 
-## Algorithmus
+## algorithm
 
 ```
-1. Für int i = (Größe des Graphen); i > 0; i -= 1:
+1. for int i = (size of graph); i > 0; i -= 1:
 
-  2. Mache eine Liste von allen möglichen
-     Kombinationen mit Größe i.
+  2. Enumerate all possible combinations of graphics
+     with cardinality i.
      
-  3. Für jede Kombination:
+  3. For each combination
   
-    4. Ist jede Knoten nicht mit irgendeinem anderen
-       Knoten in der Kombination verbunden?
+    4. Is every node not directly connected to all other nodes?
 
-       5. Wir fanden eine unabhängige Menge.
+       5. If true, an independent set is found.
 
-6. Wir fanden keine unabhängige Menge.
+6. An independent set is not found. 
 ```
 
-# Example
+# example
 
 Graph:
 
